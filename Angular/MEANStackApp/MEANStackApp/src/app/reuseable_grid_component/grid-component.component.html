@@ -1,0 +1,24 @@
+<table id="customers">
+    <thead>
+        <tr>
+            <th *ngFor="let col of gridOption.columns">
+                <span>{{col.fieldName}}</span>
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+      
+        <tr *ngFor="let row of gridOption.Rows">
+            <ng-container *ngFor="let col of gridOption.columns">
+                <td *ngIf="row">
+                      
+                        {{ row[col.fieldValue] }}
+                   
+                </td>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
+
+
