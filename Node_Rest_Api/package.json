@@ -1,0 +1,26 @@
+{
+  "name": "node_rest_api",
+  "version": "1.0.0",
+  "description": "Node rest api",
+  "main": "server.js",
+  "scripts": {
+    "test": "ng test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barclaysdev2011/MEAN_Stack_App.git"
+  },
+  "author": "Shakil Mustafiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barclaysdev2011/MEAN_Stack_App/issues"
+  },
+  "homepage": "https://github.com/Barclaysdev2011/MEAN_Stack_App#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.15"
+  }
+}
