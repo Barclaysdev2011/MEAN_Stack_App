@@ -5,4 +5,4 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.tutorials = require("./demo.model")(mongoose);
-module.exports = db;
+module.exports = db;  
