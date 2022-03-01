@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-express-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barclaysdev2011/MEAN_Stack_App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barclaysdev2011/MEAN_Stack_App/issues"
+  },
+  "homepage": "https://github.com/Barclaysdev2011/MEAN_Stack_App#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.3"
+  }
+}
