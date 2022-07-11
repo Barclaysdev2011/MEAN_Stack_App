@@ -1,20 +1,33 @@
-import React from 'react'
+import React,{useEffect}from 'react'
 import { Link } from 'react-router-dom'
 import {Row,Col,Image,ListGroup,Card,Button} from 'react-bootstrap'
 import Rating from '../components/Rating'
 import products from '../products'
+import { useDispatch,useSelector } from 'react-redux'
+import {productDetail} from '../action/productAction.js'
 import {
     useParams
   } from "react-router-dom";
+import Loader from '../components/Loader'
+import Message from '../Message'
 const ProductScreen = () => {
     const { id } = useParams();
+ const dispatch = useDispatch()
+
+ const productD = useSelector(state=>state.productDetail)
+
+ const {loading,error,product}=productD
+    useEffect(()=>{
+        dispatch(productDetail(id))
+        console.log('calling', id)
+    },[dispatch])
     
-    const product = products.find((p)=>p._id ===id)
+   // const product = products.find((p)=>p._id ===id)
   return (
     <>
     <Link className='btn btn-dark my-3' to="/">Back</Link>
-
-    <Row>
+    {loading?<Loader></Loader>:error?<Message></Message>:(
+        <Row>
         <Col md={6} >
             <Image src={product.image} alt={product.name} fluid></Image>
         </Col>
@@ -68,6 +81,8 @@ const ProductScreen = () => {
         </Col>
 
     </Row>
+    )}
+    
     </>
   )
 }
