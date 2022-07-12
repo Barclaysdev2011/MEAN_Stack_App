@@ -14,7 +14,6 @@ const HomeScreen = () => {
   const {products,loading,error} = productList
   useEffect(()=>{
     dispatch(listProduct())
-    console.log('heelllo')
   },[dispatch])
   return (
     <>
